@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Axios</title>
+  </head>
+  <body>
+    <h1>Let's find something for you to do...</h1>
+    <form action="/" method="post">
+      <label for="type"></label>
+      <select name="type">
+        <option value="">Random Type</option>
+        <option value="education">Education</option>
+        <option value="recreational">Recreational</option>
+        <option value="social">Social</option>
+        <option value="charity">Charity</option>
+        <option value="cooking">Cooking</option>
+        <option value="relaxation">Relaxation</option>
+        <option value="busywork">Busywork</option>
+      </select>
+      <label for="participants"></label>
+      <select name="participants">
+        <option value="">Any number of people</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="8">8</option>
+      </select>
+      <input type="submit" value="Go" />
+    </form>
+
+    <% if (locals.activity) { %>
+        <p><%= activity.activity %></p>
+        <p><%= activity.type %></p>
+        <p><%= activity.participants %></p>
+    <% } else { %>
+        <p><%=notFound%></p>
+    <% } %>
+  </body>
+</html>
